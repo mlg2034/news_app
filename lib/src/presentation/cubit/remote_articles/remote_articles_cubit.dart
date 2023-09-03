@@ -15,7 +15,7 @@ class RemoteArticlesCubit
   RemoteArticlesCubit(this._apiRepository)
       : super(const RemoteArticlesLoading(), []);
   int _page = 1;
-  Future<void> gerBreakingNewsArticles() async {
+  Future<void> getBreakingNewsArticles() async {
     if (isBusy) return;
     await run(() async {
       final response = await _apiRepository.gerBreakingNewsArticles(
